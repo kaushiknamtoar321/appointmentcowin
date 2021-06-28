@@ -188,6 +188,6 @@ function updatePermissions(param) {
     return response;
 }
 
-server.listen('8090', () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('Server is up!!');
 })
