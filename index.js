@@ -120,7 +120,7 @@ async function fetchSlotAvailability(args) {
     console.log('Streaming slots....')
     try {
         const response = await axios.get(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=758035&date=${args.date}`);
-        if(!_.isEmpty(response.data.centers))
+        if (!_.isEmpty(response.data.centers))
             console.log(response.data);
         let centers = _.get(response.data, 'centers', []);
         centers.forEach(c => {
@@ -188,6 +188,6 @@ function updatePermissions(param) {
     return response;
 }
 
-server.listen(process.env.PORT || 3000, () => {
-    console.log('Server is up!!');
-})
+server.listen({ port: process.env.PORT || 8090 }).then(({ url }) => {
+    console.log(`🚀 Server ready at ${url}`);
+});
