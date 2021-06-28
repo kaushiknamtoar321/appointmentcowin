@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "2.25.1",
+    "axios": "0.21.1",
+    "graphql": "15.5.1",
+    "loadash": "1.0.0",
+    "lodash": "4.17.21",
+    "twilio": "3.64.0"
+  }
+}
